@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake & Ladder | Game</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+  <header>
+    <h1>🎯 Snake & Ladder Game</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html" class="active">Play</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="game-container">
+    <section class="board-section">
+      <div class="board" id="board"></div>
+    </section>
+
+    <section class="control-section">
+      <div class="player-info">
+        <p>Current Player: <span id="currentPlayer">Player 1</span></p>
+      </div>
+
+      <div class="dice-area">
+        <img id="diceImage" src="assets/images/dice1.png" alt="Dice">
+        <button id="rollDiceBtn">Roll Dice</button>
+      </div>
+
+      <div class="score-area">
+        <p><strong>Player 1:</strong> <span id="p1-pos">1</span></p>
+        <p><strong>Player 2:</strong> <span id="p2-pos">1</span></p>
+      </div>
+
+      <button id="resetBtn">Reset Game</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Snake & Ladder | Created by Aniket</p>
+  </footer>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
