@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const playerName = playerInput.value.trim();
         if (playerName) {
             localStorage.setItem("playerName", playerName);
-            window.location.href = "game.html";
+            window.location.href = "pages/game.html";
         }
     });
 });
