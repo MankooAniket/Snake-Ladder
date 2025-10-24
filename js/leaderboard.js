@@ -2,22 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const winnerBox = document.getElementById("winnerBox");
     const clearBtn = document.getElementById("clearDataBtn");
 
-    // 🏁 Load last winner from localStorage
-    const lastWinnerData = localStorage.getItem("lastWinner");
+    let leaderboardData = JSON.parse(localStorage.getItem("leaderboard")) || [];
 
-    if (lastWinnerData) {
-        const data = JSON.parse(lastWinnerData);
-        winnerBox.innerHTML = `
-            <p><strong>${data.winner}</strong></p>
-            <p>Played on: ${data.time}</p>
-        `;
+    if (leaderboardData.length > 0) {
+        winnerBox.innerHTML = leaderboardData
+            .map(
+                (entry, index) =>
+                    `<p>${index + 1}. <strong>${entry.winner}</strong> - ${entry.time}</p>`
+            )
+            .join("");
     } else {
         winnerBox.innerHTML = `<p>No recent game data found.</p>`;
     }
 
-    // 🧹 Clear storage data
     clearBtn.addEventListener("click", () => {
-        localStorage.removeItem("lastWinner");
+        localStorage.removeItem("leaderboard");
+        leaderboardData = [];
         winnerBox.innerHTML = `<p>Leaderboard cleared.</p>`;
     });
 });

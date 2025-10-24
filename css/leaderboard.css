@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #83a4d4, #b6fbff);
+    background: linear-gradient(135deg, #3282B8, #BBE1FA);
     font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
@@ -8,14 +8,47 @@ body {
     margin: 0;
 }
 
+#app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
-    text-align: center;
-    margin-top: 40px;
+    background-color: #222;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+    color: #aef1c5;
+    text-decoration: underline;
 }
 
 h1 {
     font-size: 2rem;
-    color: #333;
+    margin: 0;
 }
 
 main {
@@ -24,6 +57,8 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 2rem 0;
+    box-sizing: border-box;
 }
 
 #leaderboard-container {
@@ -32,7 +67,7 @@ main {
     padding: 30px;
     width: 90%;
     max-width: 400px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
     text-align: center;
 }
 
@@ -43,27 +78,64 @@ main {
     margin-top: 10px;
     font-weight: 500;
     color: #333;
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.info-box p {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 5px;
+    margin: 0;
+    font-size: 1rem;
 }
 
 .btn-group {
     margin-top: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 button,
 .btn {
-    background: #007bff;
+    background: #207cca;
     border: none;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s;
 }
 
 button:hover,
 .btn:hover {
-    background: #0056b3;
+    background: #125e8a;
+    transform: scale(1.03);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #222;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button,
+    .btn {
+        width: 100%;
+    }
 }

@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Leaderboard | Snake & Ladders</title>
-    <link rel="stylesheet" href="../styles/leaderboard.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/leaderboard.css" />
 </head>
 <body>
-    <header>
-        <h1>🏆 Snake & Ladders Leaderboard</h1>
-    </header>
+    <div id="app">
+        <header>
+            <h1>🎯 Snake & Ladder Game</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="game.html">Play</a></li>
+                    <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <div id="leaderboard-container">
-            <h2>Last Game Result</h2>
-            <div id="winnerBox" class="info-box">
-                <p>No recent game data found.</p>
+        <main>
+            <div id="leaderboard-container">
+                <h2>Recent Game Results</h2>
+                <div id="winnerBox" class="info-box">
+                    <p>No recent game data found.</p>
+                </div>
+
+                <div class="btn-group">
+                    <button id="clearDataBtn">🧹 Clear Data</button>
+                    <a href="../index.html" class="btn">⬅ Back to Home</a>
+                </div>
             </div>
+        </main>
 
-            <div class="btn-group">
-                <button id="clearDataBtn">🧹 Clear Data</button>
-                <a href="../index.html" class="btn">⬅ Back to Home</a>
-            </div>
-        </div>
-    </main>
+        <footer>
+            <p>© 2025 Snake & Ladders | Created by Aniket</p>
+        </footer>
+    </div>
 
-    <footer>
-        <p>© 2025 Snake & Ladders | Built by Aniket</p>
-    </footer>
-
-    <script src="../scripts/leaderboard.js"></script>
+    <script src="../js/leaderboard.js" defer></script>
 </body>
 </html>

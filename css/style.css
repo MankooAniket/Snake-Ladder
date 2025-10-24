@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Body & Layout */
 body {
     background: linear-gradient(135deg, #3282B8, #BBE1FA);
     min-height: 100vh;
@@ -14,10 +12,9 @@ body {
     flex-direction: column;
 }
 
-/* Header */
 header {
     background-color: #222;
-    color: #fff ;
+    color: #fff;
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
@@ -34,6 +31,7 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
 nav a:hover,
@@ -42,58 +40,69 @@ nav a.active {
     color: #aef1c5;
 }
 
-/* Home Section */
 .home-container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .welcome-box {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem 3rem;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     text-align: center;
-    max-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 .welcome-box h2 {
     margin-bottom: 1rem;
-    color: #333;
+    color: #292b46;
 }
 
 .welcome-box p {
     margin-bottom: 1.5rem;
-    color: #555;
+    color: #444;
+    font-size: 1rem;
 }
 
-/* Input + Button */
 input[type="text"] {
     width: 100%;
-    padding: 0.7rem;
+    padding: 0.8rem;
     margin-bottom: 1rem;
     border: 2px solid #333;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     outline: none;
+    background: #f7f9fa;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    background: #eaf4ff;
 }
 
 button {
-    background-color: #333;
+    background-color: #007bff;
     color: white;
-    padding: 0.7rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
+    width: 100%;
+    font-weight: 600;
 }
 
 button:hover {
-    background-color: #4caf50;
+    background-color: #0056b3;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
@@ -102,7 +111,18 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 600px) {
     .welcome-box {
         padding: 1.5rem;
