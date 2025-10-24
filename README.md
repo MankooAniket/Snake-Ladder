@@ -38,31 +38,6 @@ The winner is stored in a persistent leaderboard using **Web Storage (LocalStora
 
 ---
 
-## 📁 File Structure
-
-snake-ladders-game/
-│
-├── index.html # Home Page
-├── pages/
-│ ├── game.html # Main game page
-│ ├── leaderboard.html # Leaderboard page
-│
-├── assets/
-│ ├── css/
-│ │ ├── style.css # Main styling
-│ │ ├── game.css # Game board styling
-│ │ └── leaderboard.css # Leaderboard styling
-│ ├── js/
-│ │ ├── game.js # Game logic
-│ │ └── leaderboard.js # Leaderboard logic
-│ └── images/
-│ ├── dice1.png ... dice6.png # Dice faces
-│ └── board-bg.png # Optional board background
-│
-└── README.md
-
----
-
 ## 🎮 How to Play
 
 1. Open **index.html** in your browser.  
