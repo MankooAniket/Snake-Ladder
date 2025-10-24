@@ -5,6 +5,11 @@ This project demonstrates front-end concepts, local storage usage, CRUD operatio
 
 ---
 
+## 🌐 Live Demo  
+👉 [Play Now](https://mankooaniket.github.io/Snake-Ladder/)
+
+---
+
 ## 🎯 Project Overview
 
 This is a two-player version of the classic Snake & Ladders game.  
